@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Common metas -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My account</title>
+
+  <!-- SEO metas -->
+  <meta name="description" content="My account page">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+  <div class="site">
+
+    <div class="nav">
+      <btn class="btn btn-outline-primary">voor werkgevers</btn>
+      <a href="#" title="Ga naar mijn profiel."><img class="profile-image-thumb" src="img/profile-sm.png"></a>
+    </div>
+
+    <div class="page">
+      <div class="page-header">
+        <h1>Mijn account</h1>
+      </div>
+
+      <div class="page-nav">
+        <ul>
+          <li>Job Alerts</li>
+          <li>CV</li>
+          <li>Favorieten</li>
+          <li class="selected">Accountgegevens</li>
+          <li>Uitloggen</li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h2>Accountgegevens</h2>
+
+        <h3>E-mailadres</h3>
+        <span class="email">a.krasniqi@jobsrepublic.nl</span>
+        <a href="#">wijzigen</a>
+
+        <h3>Social accounts</h3>
+        Gekoppeide social accounts - Voor snelle en eenvoudige toegang tot je social accounts.
+
+        <ul>
+          <li>Niet gekoppeld <a href="#">aanmelden via Facebook ></a></li>
+          <li>Niet gekoppeld <a href="#">aanmelden via Linkedin ></a></li>
+          <li>Niet gekoppeld <a href="#">aanmelden via Googleplus ></a></li>
+        </ul>
+
+        <h3>Profielfoto</h3>
+
+        <a href="#" title="Verander afbeelding."><img class="profile-image" src="img/profile.png"></a>
+
+        <h3>Persoonsgegevens</h3>
+
+        <form>
+          <div class="grid form-group">
+            <div class="unit half">
+              <label for="firstname">Voornaam</label>
+              <input type="text" class="form-control" id="firstname" value="Agnesa">
+            </div>
+            <div class="unit half">
+              <label for="lastname">Achternaam</label>
+              <input type="text" class="form-control" id="lastname" value="Krasniqi">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sex">Geslacht <span class="form-text">(optioneel)</span></label>
+            <select class="form-control" id="sex">
+              <option>vrouw</option>
+              <option>mannetje</option>
+              <option>anders</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="day">Geboortedatum <span class="form-text">(optioneel)</span></label>
+            <input type="number" class="form-control" id="day" value="10">
+            <select class="form-control" id="month">
+              <option>januari</option>
+              <option>februari</option>
+              <option>maart</option>
+              <option>april</option>
+              <option>mei</option>
+              <option>juni</option>
+              <option>juli</option>
+              <option>augustus</option>
+              <option>september</option>
+              <option>oktober</option>
+              <option>november</option>
+              <option>december</option>
+            </select>
+            <input type="number" class="form-control" id="year" value="1991">
+          </div>
+
+          <div class="form-group">
+            <label for="tel">Telefoonnummer <span class="form-text">(optioneel)</span></label>
+            <input type="tel" class="form-control" id="tel">
+          </div>
+
+          <btn class="btn btn-primary" type="submit">wijzigingen opslaan</btn>
+        </form>
+
+        <h3>Watchwoord wijzigen</h3>
+
+        <form>
+          <div class="form-group">
+            <label for="cur_pwd">Huidig wachtwoord</label>
+            <input type="password" class="form-control" id="cur_pwd">
+          </div>
+
+          <div class="form-group">
+            <label for="new_pwd">Nieuw wachtwoord</label>
+            <input type="password" class="form-control" id="new_pwd">
+          </div>
+
+          <div class="form-group">
+            <label for="new_pwd_conf">Bevestig je nieuwe wachtwoord</label>
+            <input type="password" class="form-control" id="new_pwd_conf">
+          </div>
+
+          <btn type="submit" class="btn btn-primary">wijzigingen opslaan</btn>
+        </form>
+
+        <h3>Account verwijderen</h3>
+        Je kunt in plaats va, je account verwijderen ook je <a href="#">Job Alerts uitzetten</a>.
+        <btn class="btn btn-outline-danger" type="submit">account verwijderen</btn>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-nav grid">
+        <div class="unit one-quarter">test</div>
+        <div class="unit one-quarter">test</div>
+        <div class="unit one-quarter">test</div>
+        <div class="unit one-quarter">test</div>
+      </div>
+
+      <div class="footer-social grid">
+        <div class="unit one-quarter">test</div>
+        <div class="unit one-quarter">test</div>
+      </div>
+
+      <div class="footer-logo">
+        Powered by
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Script files -->
+  <script src="js/underscore-min.js"></script>
+  <script src="js/backbone-min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

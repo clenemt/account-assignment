@@ -1,0 +1,21 @@
+{
+  "name": "account-assignment",
+  "version": "0.0.1",
+  "description": "A sample assignment",
+  "scripts": {
+    "start": "node-sass --output-style compressed -o css/ scss/main.scss",
+    "watch": "watch-run -d 500 -p scss/** \"npm run start\"",
+    "sync": "browser-sync start -s -f css js index.html --reload-delay 500 --no-ui --no-notify"
+  },
+  "devDependencies": {
+    "watch-run": "latest",
+    "node-sass": "latest",
+    "browser-sync": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clenemt/account-assignment.git"
+  },
+  "author": "Clement Moron <clement.moron@gmail.com>",
+  "license": "MIT"
+}
