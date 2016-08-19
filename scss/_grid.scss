@@ -14,15 +14,11 @@
 .grid .unit {
   float: left;
   width: 100%;
-  padding: 10px;
+  padding-right: 10px;
 }
 
-.grid .unit:first-child { padding-left: 20px;  }
-.grid .unit:last-child  { padding-right: 20px; }
-
-.unit .unit:first-child { padding-left: 0;  }
+.grid .unit:last-child  { padding-right: 0; }
 .unit .unit:last-child  { padding-right: 0; }
-.unit .grid:first-child > .unit { padding-top: 0; }
 .unit .grid:last-child > .unit  { padding-bottom: 0; }
 
 .no-gutters .unit,
@@ -47,9 +43,7 @@
 
 @include mq-down (sm) {
   .grid:not(.no-stacking-on-mobiles) > .unit {
-    width: 100% !important;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 50% !important;
   }
 
   .unit .grid .unit {

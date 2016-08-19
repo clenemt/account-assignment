@@ -3,13 +3,21 @@
 .page-header {
   background: $purple;
   color: #fff;
-  line-height: 9rem;
+  line-height: 5rem;
 
   h1 {
     line-height: inherit;
     margin-bottom: 0;
   }
 }
+
+// Responsive header
+@include mq-up(md) {
+  .page-header {
+    line-height: 9rem;
+  }
+}
+
 
 // NAVS ====================================
 
@@ -21,18 +29,15 @@
 
 .page-nav {
   background: $gray-lightest;
-  line-height: 4rem;
-}
-
-.nav,
-.page-nav {
+  padding-top: $spacer;
 
   li {
     display: inline-block;
+    margin-bottom: $spacer;
   }
 
   li + li {
-    margin-left: $spacer;
+    margin-right: $spacer;
   }
 
   a.active,
@@ -52,7 +57,11 @@
 .footer {
   background: $gray-darker;
 
-  &, a {
+  &,
+  a,
+  a:hover,
+  a:active,
+  a:focus {
     color: $gray-lightest;
   }
 
@@ -60,14 +69,6 @@
     font-weight: bold;
     font-size: $fs;
     margin-bottom: 1rem;
-  }
-
-  .unit:first-child {
-    padding-left: 0;
-  }
-
-  .unit:last-child {
-    padding-right: 0;
   }
 }
 
@@ -78,20 +79,32 @@
 }
 
 .footer-nav {
-  padding: $spacer1 0 $spacer2;
+  padding: $spacer 0 $spacer0;
   border-bottom: $border-width solid $gray-light;
-
-  li {
-    line-height: 2.5rem;
-  }
+  li { line-height: 1.5rem; }
 }
 
 .footer-social {
-  padding: $spacer 0 $spacer1;
+  padding: $spacer 0 .25rem;
 }
 
 .footer-powered {
   padding: $spacer0 0;
+}
+
+// Responsive footer
+@include mq-up(md) {
+  .footer-nav {
+    padding: $spacer1 0 $spacer2;
+  }
+
+  .footer-nav li {
+    line-height: 2.5rem;
+  }
+
+  .footer-social {
+    padding: $spacer2 0 $spacer1;
+  }
 }
 
 // CONTENT ====================================
@@ -137,16 +150,7 @@
 }
 
 .form {
-
   @include clearfix();
-
-  .unit:first-child {
-    padding-left: 0;
-  }
-
-  .unit:last-child {
-    padding-right: 0;
-  }
 
   .btn {
     float: right
