@@ -1,55 +1,52 @@
-// COLORS ====================================
+// COLORS - INDEX ====================================
 
-// COLORS - INDEX ------------------
+$gray-darker:               #212121;
 $gray-dark:                 #333;
 $gray:                      #55595c;
 $gray-light:                #818a91;
-$gray-lighter:              #eceeef;
-$gray-lightest:             #fafaf8;
+$gray-lighter:              #ddd;
+$gray-lightest:             #eceeef;
 
-$blue:                      #4072AF;
+$purple:                    #741474;
+$light-purple:              lighten($purple, 45%);
+$dark-purple:               darken($purple, 10%);
+
+$orange:                    #f38420;
+$light-orange:              lighten($orange, 45%);
+$dark-orange:               darken($orange, 10%);
+
+$red:                       #ce2027;
+$light-red:                 lighten($red, 45%);
+$dark-red:                  darken($red, 10%);
+
+$blue:                      #0b88bb;
 $light-blue:                lighten($blue, 45%);
-$dark-blue:                 darken($blue, 20%);
-
-$ligt-yellow:               #fcf8e3;
-
-$red:                       #bd4147;
-
-// COLORS - BRAND ------------------
-$brand-color:               $blue;
-$brand-light-color:         $light-blue;
-$brand-secondary:           $gray-dark;
-$text-muted:                $gray-light;
+$dark-blue:                 darken($blue, 5%);
 
 // GLOBALS  ====================================
 
-$body-bg:                   $gray-lightest;
+$body-bg:                   #fff;
 $body-color:                $gray-dark;
 
-// GLOBALS - LINKS ------------------
-$link-color:                $brand-color;
+$link-color:                $purple;
+$link-hover-color:          darken($dark-purple, 10%);
 $link-decoration:           none;
-$link-hover-color:          $dark-blue;
 $link-hover-decoration:     underline;
 
-// GLOBALS - SPACERS ------------------
 $spacer:                    1rem;
-$spacer0:                   $spacer/2;
+$spacer0:                   $spacer / 2;
 $spacer1:                   $spacer * 1.5;
 $spacer2:                   $spacer * 2;
 $spacer3:                   $spacer * 2.5;
 $spacer4:                   $spacer * 3;
 
-// GLOBALS - BORDERS ------------------
 $border-width:              1px;
-$border-radius:             .25rem;
-$border-radius-sm:          .2rem;
-$border-radius-lg:          .3rem;
+$border-radius:             .2rem;
 
-// GLOBALS - FONTS ------------------
-$font-family:               "Lora", sans-serif;
-$font-family-monospace:     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$font-heading:              "Lato", serif;
+// FONTS  ====================================
+
+$ff:                        'Open Sans', sans-serif;
+$ff-monospace:              Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 $lh:                        1.5;
 $lh-sm:                     1.1;

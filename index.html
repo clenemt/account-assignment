@@ -16,46 +16,52 @@
   <link rel="shortcut icon" href="img/favicon.ico">
 
   <!-- CSS files -->
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
 </head>
 <body>
 
   <div class="site">
 
     <div class="nav">
-      <btn class="btn btn-outline-primary">voor werkgevers</btn>
-      <a href="#" title="Ga naar mijn profiel."><img class="profile-image-thumb" src="img/profile-sm.png"></a>
+      <div class="container">
+        <button class="btn btn-outline-primary">voor werkgevers</button>
+        <a href="#" title="Ga naar mijn profiel."><img class="profile-image-thumb" src="img/profile.png"></a>
+      </div>
     </div>
 
     <div class="page">
       <div class="page-header">
-        <h1>Mijn account</h1>
+        <div class="container">
+          <h1>Mijn account</h1>
+        </div>
       </div>
 
       <div class="page-nav">
-        <ul>
-          <li>Job Alerts</li>
-          <li>CV</li>
-          <li>Favorieten</li>
-          <li class="selected">Accountgegevens</li>
-          <li>Uitloggen</li>
-        </ul>
+        <div class="container">
+          <ul>
+            <li><a href="#">Job Alerts</a></li>
+            <li><a href="#">CV</a></li>
+            <li><a href="#">Favorieten</a></li>
+            <li><a class="active" href="#">Accountgegevens</a></li>
+            <li><a href="#">Uitloggen</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="content">
+      <div class="content container">
         <h2>Accountgegevens</h2>
 
         <h3>E-mailadres</h3>
-        <span class="email">a.krasniqi@jobsrepublic.nl</span>
-        <a href="#">wijzigen</a>
+        <p><span class="email">a.krasniqi@jobsrepublic.nl</span><a href="#">wijzigen</a></p>
 
         <h3>Social accounts</h3>
-        Gekoppeide social accounts - Voor snelle en eenvoudige toegang tot je social accounts.
+        <p>Gekoppeide social accounts - Voor snelle en eenvoudige toegang tot je social accounts.</p>
 
-        <ul>
-          <li>Niet gekoppeld <a href="#">aanmelden via Facebook ></a></li>
-          <li>Niet gekoppeld <a href="#">aanmelden via Linkedin ></a></li>
-          <li>Niet gekoppeld <a href="#">aanmelden via Googleplus ></a></li>
+        <ul class="social-links">
+          <li><img src="img/facebook.png">Niet gekoppeld <a class="styled-link" href="#">aanmelden via Facebook &#9657;</a></li>
+          <li><img src="img/linkedin.png">Niet gekoppeld <a class="styled-link" href="#">aanmelden via Linkedin &#9657;</a></li>
+          <li><img src="img/google.png">Niet gekoppeld <a class="styled-link" href="#">aanmelden via Googleplus &#9657;</a></li>
         </ul>
 
         <h3>Profielfoto</h3>
@@ -64,8 +70,8 @@
 
         <h3>Persoonsgegevens</h3>
 
-        <form>
-          <div class="grid form-group">
+        <form class="form">
+          <div class="form-group grid">
             <div class="unit half">
               <label for="firstname">Voornaam</label>
               <input type="text" class="form-control" id="firstname" value="Agnesa">
@@ -85,24 +91,30 @@
             </select>
           </div>
 
-          <div class="form-group">
+          <div class="form-group clearfix">
             <label for="day">Geboortedatum <span class="form-text">(optioneel)</span></label>
-            <input type="number" class="form-control" id="day" value="10">
-            <select class="form-control" id="month">
-              <option>januari</option>
-              <option>februari</option>
-              <option>maart</option>
-              <option>april</option>
-              <option>mei</option>
-              <option>juni</option>
-              <option>juli</option>
-              <option>augustus</option>
-              <option>september</option>
-              <option>oktober</option>
-              <option>november</option>
-              <option>december</option>
-            </select>
-            <input type="number" class="form-control" id="year" value="1991">
+            <div class="day">
+              <input type="number" class="form-control" id="day" value="10">
+            </div>
+            <div class="month">
+              <select class="form-control" id="month">
+                <option>januari</option>
+                <option>februari</option>
+                <option>maart</option>
+                <option>april</option>
+                <option>mei</option>
+                <option>juni</option>
+                <option>juli</option>
+                <option>augustus</option>
+                <option>september</option>
+                <option>oktober</option>
+                <option>november</option>
+                <option>december</option>
+              </select>
+            </div>
+            <div class="year">
+              <input type="number" class="form-control" id="year" value="1991">
+            </div>
           </div>
 
           <div class="form-group">
@@ -110,12 +122,12 @@
             <input type="tel" class="form-control" id="tel">
           </div>
 
-          <btn class="btn btn-primary" type="submit">wijzigingen opslaan</btn>
+          <button class="btn btn-primary" type="submit">wijzigingen opslaan</button>
         </form>
 
         <h3>Watchwoord wijzigen</h3>
 
-        <form>
+        <form class="form">
           <div class="form-group">
             <label for="cur_pwd">Huidig wachtwoord</label>
             <input type="password" class="form-control" id="cur_pwd">
@@ -131,30 +143,72 @@
             <input type="password" class="form-control" id="new_pwd_conf">
           </div>
 
-          <btn type="submit" class="btn btn-primary">wijzigingen opslaan</btn>
+          <button type="submit" class="btn btn-primary">wijzigingen opslaan</button>
         </form>
 
         <h3>Account verwijderen</h3>
-        Je kunt in plaats va, je account verwijderen ook je <a href="#">Job Alerts uitzetten</a>.
-        <btn class="btn btn-outline-danger" type="submit">account verwijderen</btn>
+        <p>Je kunt in plaats va, je account verwijderen ook je <a class="styled-link" href="#">Job Alerts uitzetten</a>.</p>
+        <button class="btn btn-outline-danger" type="submit">account verwijderen</button>
       </div>
     </div>
 
     <div class="footer">
       <div class="footer-nav grid">
-        <div class="unit one-quarter">test</div>
-        <div class="unit one-quarter">test</div>
-        <div class="unit one-quarter">test</div>
-        <div class="unit one-quarter">test</div>
+        <div class="container">
+          <div class="unit one-quarter">
+            <ul>
+              <li class="header"><a href="#">&nbsp;</a></li>
+              <li><a href="#">Helpcenter</a></li>
+              <li><a href="#">Over ons</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Jobsrepublic</a></li>
+            </ul>
+          </div>
+          <div class="unit one-quarter">
+            <ul>
+              <li class="header"><a href="#">Ontdek</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Vacatures zoeken</a></li>
+              <li><a href="#">Bladeren door vacatures</a></li>
+            </ul>
+          </div>
+          <div class="unit one-quarter">
+            <ul>
+              <li class="header"><a href="#">Persoonlijk</a></li>
+              <li><a href="#">Registreer</a></li>
+              <li><a href="#">Plaats je CV</a></li>
+            </ul>
+          </div>
+          <div class="unit one-quarter">
+            <ul>
+              <li class="header"><a href="#">Voor werkgevers</a></li>
+              <li><button class="btn btn-primary">vacature plaatsen</button></li>
+              <li><a href="#">Jobsrepublic ONE</a></li>
+              <li><a href="#">Algemene Voorwaarden</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="footer-social grid">
-        <div class="unit one-quarter">test</div>
-        <div class="unit one-quarter">test</div>
+        <div class="container">
+          <div class="unit one-quarter">
+            <ul>
+              <li><a href="#">Privacy statement</a></li>
+            </ul>
+          </div>
+          <div class="unit one-quarter">
+            <ul>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="footer-logo">
-        Powered by
+    <div class="footer-powered">
+      <div class="container">
+        Powered by &nbsp;<img src="img/jobsrepublic.png">
       </div>
     </div>
 

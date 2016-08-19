@@ -1,5 +1,3 @@
-// UTILS ====================================
-
 @mixin clearfix () {
   &::after {
     content: "";
@@ -8,13 +6,7 @@
   }
 }
 
-@mixin tab-focus () {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-// MEDIA QUERIES (MQ) ====================================
+// MEDIA QUERIES ====================================
 
 // MQ - HELPERS ------------------
 @function breakpoint-next ($name, $breakpoints, $breakpoint-names: map-keys($breakpoints)) {

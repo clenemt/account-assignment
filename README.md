@@ -3,5 +3,8 @@
 
 A sample assignment. Feel free to fork, copy and modify as needed.
 
+# Example
+See https://clenemt.github.io/account-assignment/ for a look at the code live. :rocket:
+
 # License
 Licensed under [MIT](LICENSE.md)

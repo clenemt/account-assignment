@@ -1,166 +1,182 @@
-.site {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 $spacer;
-  @include make-container();
-}
+// HEADER ====================================
 
-// RESPONSIVE SITE
-@include mq-up(sm) {
-  .site {
-    padding: 0 $spacer2;
-  }
-}
+.page-header {
+  background: $purple;
+  color: #fff;
+  line-height: 9rem;
 
-// SITE HEADER ====================================
-
-.site-header {
-  margin: $spacer4 0 $spacer1;
-  @include clearfix();
-}
-
-.site-logo {
-  width: 3rem;
-  height: 3rem;
-}
-
-.site-nav {
-  display: flex;
-  justify-content: center;
-  font-family: "Lato", serif;
-  font-size: 1.1rem;
-}
-
-.site-title {
-  text-align: center;
-}
-
-.site-nav a {
-  flex: 0 1 auto;
-  padding: 0 .25rem;
-  margin-right: $spacer0;
-  transition: background 0.1s ease-out;
-
-  &:hover {
-    text-decoration: none;
-    color: $link-color;
-    background-color: $brand-light-color;
-  }
-
-  &:focus,
-  &:active {
-    background-color: $link-color;
-    text-decoration: none;
-    color: #fff;
-  }
-
-  &.current {
-    font-weight: bold;
-  }
-}
-
-// SITE HEADER - RESPONSIVE ------------------
-
-@include mq-up(sm) {
-  .site-header {
-    margin: $spacer4 0 $spacer2;
-  }
-
-  .site-title {
-    margin-bottom: $spacer1;
-  }
-
-  .site-nav a {
-    margin-right: $spacer1;
-  }
-}
-
-@include mq-up(md) {
-  .site-logo {
-    margin-left: $spacer0;
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-
-  .site-nav {
-    float: right;
-    width: 80%;
-    margin-top: $spacer0;
-    justify-content: space-around;
-    font-size: 1.25rem;
-
-    a {
-      margin-right: 0;
-      padding: .25rem $spacer0;
-    }
-  }
-
-  .site-title {
-    float: left;
-    width: 20%;
-    text-align: inherit;
-    margin-bottom: $spacer0;
-  }
-}
-
-// SITE FOOTER ====================================
-
-.site-footer {
-  margin: 4rem 0 6rem;
-  padding-top: $spacer1;
-  font-family: $font-heading;
-  border-top: 1px solid $brand-light-color;
-}
-
-.site-footer {
-  ul, li {
+  h1 {
+    line-height: inherit;
     margin-bottom: 0;
-    margin-top: 0;
   }
+}
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
+// NAVS ====================================
+
+.nav {
+  line-height: 3.5rem;
+  text-align: right;
+  margin-bottom: 4px;
+}
+
+.page-nav {
+  background: $gray-lightest;
+  line-height: 4rem;
+}
+
+.nav,
+.page-nav {
 
   li {
     display: inline-block;
   }
+
+  li + li {
+    margin-left: $spacer;
+  }
+
+  a.active,
+  a.active:hover,
+  a.active:active {
+    color: $purple;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
-.site-author {
-  font-weight: bold;
+// FOOTER ====================================
+
+.footer {
+  background: $gray-darker;
+
+  &, a {
+    color: $gray-lightest;
+  }
+
+  .header {
+    font-weight: bold;
+    font-size: $fs;
+    margin-bottom: 1rem;
+  }
+
+  .unit:first-child {
+    padding-left: 0;
+  }
+
+  .unit:last-child {
+    padding-right: 0;
+  }
+}
+
+.footer-social,
+.footer-nav,
+.footer-powered {
+  font-size: 13px;
+}
+
+.footer-nav {
+  padding: $spacer1 0 $spacer2;
+  border-bottom: $border-width solid $gray-light;
+
+  li {
+    line-height: 2.5rem;
+  }
+}
+
+.footer-social {
+  padding: $spacer 0 $spacer1;
+}
+
+.footer-powered {
+  padding: $spacer0 0;
+}
+
+// CONTENT ====================================
+
+.content {
+  margin-bottom: 5rem;
+}
+
+.profile-image-thumb {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
   margin-left: $spacer0;
 }
 
-.site-source a {
-  color: $gray;
-}
+.email {
+  font-weight: bold;
 
-.site-links {
-  @include clearfix();
-}
-
-.site-contact li,
-.site-source li {
-
-  &:not(:last-child)::after {
-    content: '|';
-    color: $brand-light-color;
-    margin: 0 .3rem 0 $spacer0;
-  }
-}
-
-// SITE FOOTER - RESPONSIVE ------------------
-@include mq-up(sm) {
-  .site-contact {
+  + a {
     float: right;
-    width: 50%;
-    text-align: right;
+  }
+}
+
+.social-links {
+  margin-top: -$spacer0;
+
+  li {
+    line-height: 2.5rem;
   }
 
-  .site-source {
-    float: left;
-    width: 50%;
+  img {
+    margin-right: $spacer0;
   }
+}
+
+.styled-link {
+  color: $blue;
+
+  &:hover,
+  &:active {
+    color: $dark-blue;
+  }
+}
+
+.form {
+
+  @include clearfix();
+
+  .unit:first-child {
+    padding-left: 0;
+  }
+
+  .unit:last-child {
+    padding-right: 0;
+  }
+
+  .btn {
+    float: right
+  }
+
+  .day,
+  .month,
+  .year {
+    float: left;
+  }
+
+  .day {
+    width: 20%;
+    padding-right: $spacer0;
+  }
+
+  .month {
+    width: 50%;
+    padding-right: $spacer0;
+  }
+
+  .year {
+    width: 30%;
+  }
+}
+
+// GLOBALS ====================================
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }

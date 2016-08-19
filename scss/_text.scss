@@ -1,17 +1,27 @@
-// TEXT ====================================
+// HEADINGS ====================================
 
-// TEXT - HEADINGS ------------------
 h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  font-weight: normal;
   margin-top: 0;
   margin-bottom: $spacer0;
-  font-family: $font-heading;
-  line-height: $lh-sm;
-  color: inherit;
 }
 
 h1 { font-size: $fs-h1; }
-h2 { font-size: $fs-h2; }
-h3 { font-size: $fs-h3; }
+
+h2 {
+  font-size: $fs-h2;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: $fs-h3;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: $border-width solid $gray-lighter;
+}
+
 h4 { font-size: $fs-h4; }
 h5 { font-size: $fs-h5; }
 h6 { font-size: $fs-h6; }
@@ -25,13 +35,38 @@ h6 { font-size: $fs-h6; }
   h6 { font-size: $fs-md-h6; }
 }
 
-// TEXT - UTILS ------------------
-.lead {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  p { margin-bottom: 1.5rem; }
+// BODY COPY ====================================
+
+p {
+  margin-top: 0;
+  margin-bottom: $spacer;
 }
 
-@include mq-up(md) {
-  .lead { font-size: 1.5rem; }
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: $spacer;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+.clearfix {
+  @include clearfix();
 }
