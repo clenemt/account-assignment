@@ -34,9 +34,6 @@
   li {
     display: inline-block;
     margin-bottom: $spacer;
-  }
-
-  li + li {
     margin-right: $spacer;
   }
 
@@ -69,6 +66,10 @@
     font-weight: bold;
     font-size: $fs;
     margin-bottom: 1rem;
+  }
+
+  .btn {
+    font-size: inherit;
   }
 }
 
