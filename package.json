@@ -4,12 +4,12 @@
   "description": "A sample assignment",
   "scripts": {
     "build": "run-p build:*",
-    "build:css": "node-sass --output-style compressed -o css/ scss/main.scss",
-    "build:js": "babel js/app -d js/dist",
+    "build:css": "node-sass --output-style compressed -o dist/css/main.css scss/main.scss",
+    "build:js": "babel js -d dist/js",
     "watch": "run-p watch:*",
     "watch:css": "watch-run -p scss/** \"npm run build:css\"",
-    "watch:js": "watch-run -p js/app/** \"npm run build:js\"",
-    "sync": "browser-sync start -s -f css js index.html --reload-delay 500 --no-ui --no-notify"
+    "watch:js": "watch-run -p js/** \"npm run build:js\"",
+    "sync": "browser-sync start -s -f dist index.html --reload-delay 500 --no-ui"
   },
   "devDependencies": {
     "watch-run": "latest",

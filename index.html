@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="img/favicon.ico">
 
   <!-- CSS files -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="dist/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" rel="stylesheet">
 </head>
 <body>
@@ -127,20 +127,20 @@
 
         <h3>Watchwoord wijzigen</h3>
 
-        <form class="form">
+        <form id="form_pwd" class="form">
           <div class="form-group">
             <label for="cur_pwd">Huidig wachtwoord</label>
-            <input type="password" class="form-control" id="cur_pwd">
+            <input type="password" class="form-control" id="cur_pwd" name="cur_pwd">
           </div>
 
           <div class="form-group">
             <label for="new_pwd">Nieuw wachtwoord</label>
-            <input type="password" class="form-control" id="new_pwd">
+            <input type="password" class="form-control" id="new_pwd" name="new_pwd">
           </div>
 
           <div class="form-group">
-            <label for="new_pwd_conf">Bevestig je nieuwe wachtwoord</label>
-            <input type="password" class="form-control" id="new_pwd_conf">
+            <label for="repeat_pwd">Bevestig je nieuwe wachtwoord</label>
+            <input type="password" class="form-control" id="repeat_pwd" name="repeat_pwd">
           </div>
 
           <button type="submit" class="btn btn-primary">wijzigingen opslaan</button>
@@ -215,9 +215,13 @@
   </div>
 
   <!-- Script files -->
-  <script src="js/underscore-min.js"></script>
-  <script src="js/backbone-min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="lib/underscore-min.js"></script>
+  <script src="lib/jquery-min.js"></script>
+  <script src="lib/backbone-min.js"></script>
+  <script src="lib/backbone-validation-min.js"></script>
+  <script src="dist/js/views/password.js"></script>
+  <script src="dist/js/models/password.js"></script>
+  <script src="dist/js/app.js"></script>
 
 </body>
 </html>
