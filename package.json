@@ -3,14 +3,21 @@
   "version": "0.0.1",
   "description": "A sample assignment",
   "scripts": {
-    "start": "node-sass --output-style compressed -o css/ scss/main.scss",
-    "watch": "watch-run -d 500 -p scss/** \"npm run start\"",
+    "build": "run-p build:*",
+    "build:css": "node-sass --output-style compressed -o css/ scss/main.scss",
+    "build:js": "babel js/app -d js/dist",
+    "watch": "run-p watch:*",
+    "watch:css": "watch-run -p scss/** \"npm run build:css\"",
+    "watch:js": "watch-run -p js/app/** \"npm run build:js\"",
     "sync": "browser-sync start -s -f css js index.html --reload-delay 500 --no-ui --no-notify"
   },
   "devDependencies": {
     "watch-run": "latest",
     "node-sass": "latest",
-    "browser-sync": "latest"
+    "browser-sync": "latest",
+    "babel-cli": "latest",
+    "babel-preset-es2015": "latest",
+    "npm-run-all": "latest"
   },
   "repository": {
     "type": "git",
