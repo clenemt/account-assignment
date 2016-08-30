@@ -5,6 +5,8 @@
   @include make-container();
 }
 
+// GRID ====================================
+
 .grid {
   display: block;
   clear: both;
@@ -21,11 +23,6 @@
 .unit .unit:last-child  { padding-right: 0; }
 .unit .grid:last-child > .unit  { padding-bottom: 0; }
 
-.no-gutters .unit,
-.unit.no-gutters {
-  padding: 0 !important;
-}
-
 .grid .whole            { width: 100%; }
 .grid .half             { width: 50%; }
 .grid .one-third        { width: 33.3332%; }
@@ -40,6 +37,13 @@
 .grid .four-fifths,     { width: 80%; }
 .grid .golden-small,    { width: 38.2716%; }
 .grid .golden-large,    { width: 61.7283%; }
+
+.no-gutters .unit,
+.unit.no-gutters {
+  padding: 0 !important;
+}
+
+// RESPONSIVE ====================================
 
 @include mq-down (sm) {
   .grid:not(.no-stacking-on-mobiles) > .unit {

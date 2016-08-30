@@ -45,3 +45,30 @@ label {
   font-size: 90%;
   font-weight: normal;
 }
+
+// VALIDATION ====================================
+
+.form-feedback {
+  margin-top: $spacer0;
+  font-size: 90%;
+}
+
+.has-success {
+  .form-control {
+    border-color: $green;
+  }
+
+  .form-feedback {
+    color: $green;
+  }
+}
+
+.has-error {
+  .form-control {
+    border-color: $red;
+  }
+
+  .form-feedback {
+    color: $red;
+  }
+}

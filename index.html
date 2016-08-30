@@ -70,56 +70,199 @@
 
         <h3>Persoonsgegevens</h3>
 
-        <form class="form">
-          <div class="form-group grid">
-            <div class="unit half">
+        <form class="form" id="form_user">
+          <div class="grid">
+            <div class="form-group unit half">
               <label for="firstname">Voornaam</label>
-              <input type="text" class="form-control" id="firstname" value="Agnesa">
+              <input type="text" class="form-control" id="firstname" name="firstname">
+              <div class="form-feedback hidden"></div>
             </div>
-            <div class="unit half">
+            <div class="form-group unit half">
               <label for="lastname">Achternaam</label>
-              <input type="text" class="form-control" id="lastname" value="Krasniqi">
+              <input type="text" class="form-control" id="lastname"  name="lastname">
+              <div class="form-feedback hidden"></div>
             </div>
           </div>
 
           <div class="form-group">
             <label for="sex">Geslacht <span class="form-text">(optioneel)</span></label>
-            <select class="form-control" id="sex">
-              <option>vrouw</option>
-              <option>mannetje</option>
-              <option>anders</option>
+            <select class="form-control" id="sex" name="sex">
+              <option value="">&nbsp;</option>
+              <option value="male">vrouw</option>
+              <option value="female">mannetje</option>
+              <option value="other">anders</option>
             </select>
           </div>
 
-          <div class="form-group clearfix">
+          <div class="form-group">
             <label for="day">Geboortedatum <span class="form-text">(optioneel)</span></label>
             <div class="day">
-              <input type="number" class="form-control" id="day" value="10">
+              <select class="form-control" id="day" name="day">
+                <option>day</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+              </select>
             </div>
             <div class="month">
-              <select class="form-control" id="month">
-                <option>januari</option>
-                <option>februari</option>
-                <option>maart</option>
-                <option>april</option>
-                <option>mei</option>
-                <option>juni</option>
-                <option>juli</option>
-                <option>augustus</option>
-                <option>september</option>
-                <option>oktober</option>
-                <option>november</option>
-                <option>december</option>
+              <select class="form-control" id="month" name="month">
+                <option>month</option>
+                <option value="1">januari</option>
+                <option value="2">februari</option>
+                <option value="3">maart</option>
+                <option value="4">april</option>
+                <option value="5">mei</option>
+                <option value="6">juni</option>
+                <option value="7">juli</option>
+                <option value="8">augustus</option>
+                <option value="9">september</option>
+                <option value="10">oktober</option>
+                <option value="11">november</option>
+                <option value="12">december</option>
               </select>
             </div>
             <div class="year">
-              <input type="number" class="form-control" id="year" value="1991">
+              <select class="form-control" id="year" name="year">
+                <option>year</option>
+                <option>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+                <option>2011</option>
+                <option>2010</option>
+                <option>2009</option>
+                <option>2008</option>
+                <option>2007</option>
+                <option>2006</option>
+                <option>2005</option>
+                <option>2004</option>
+                <option>2003</option>
+                <option>2002</option>
+                <option>2001</option>
+                <option>2000</option>
+                <option>1999</option>
+                <option>1998</option>
+                <option>1997</option>
+                <option>1996</option>
+                <option>1995</option>
+                <option>1994</option>
+                <option>1993</option>
+                <option>1992</option>
+                <option>1991</option>
+                <option>1990</option>
+                <option>1989</option>
+                <option>1988</option>
+                <option>1987</option>
+                <option>1986</option>
+                <option>1985</option>
+                <option>1984</option>
+                <option>1983</option>
+                <option>1982</option>
+                <option>1981</option>
+                <option>1980</option>
+                <option>1979</option>
+                <option>1978</option>
+                <option>1977</option>
+                <option>1976</option>
+                <option>1975</option>
+                <option>1974</option>
+                <option>1973</option>
+                <option>1972</option>
+                <option>1971</option>
+                <option>1970</option>
+                <option>1969</option>
+                <option>1968</option>
+                <option>1967</option>
+                <option>1966</option>
+                <option>1965</option>
+                <option>1964</option>
+                <option>1963</option>
+                <option>1962</option>
+                <option>1961</option>
+                <option>1960</option>
+                <option>1959</option>
+                <option>1958</option>
+                <option>1957</option>
+                <option>1956</option>
+                <option>1955</option>
+                <option>1954</option>
+                <option>1953</option>
+                <option>1952</option>
+                <option>1951</option>
+                <option>1950</option>
+                <option>1949</option>
+                <option>1948</option>
+                <option>1947</option>
+                <option>1946</option>
+                <option>1945</option>
+                <option>1944</option>
+                <option>1943</option>
+                <option>1942</option>
+                <option>1941</option>
+                <option>1940</option>
+                <option>1939</option>
+                <option>1938</option>
+                <option>1937</option>
+                <option>1936</option>
+                <option>1935</option>
+                <option>1934</option>
+                <option>1933</option>
+                <option>1932</option>
+                <option>1931</option>
+                <option>1930</option>
+                <option>1929</option>
+                <option>1928</option>
+                <option>1927</option>
+                <option>1926</option>
+                <option>1925</option>
+                <option>1924</option>
+                <option>1923</option>
+                <option>1922</option>
+                <option>1921</option>
+                <option>1920</option>
+                <option>1919</option>
+                <option>1918</option>
+                <option>1917</option>
+                <option>1916</option>
+              </select>
             </div>
+            <div style="clear:both"></div>
+            <div class="form-feedback hidden"></div>
           </div>
 
           <div class="form-group">
             <label for="tel">Telefoonnummer <span class="form-text">(optioneel)</span></label>
-            <input type="tel" class="form-control" id="tel">
+            <input type="tel" class="form-control" id="tel" name="tel">
+            <div class="form-feedback hidden"></div>
           </div>
 
           <button class="btn btn-primary" type="submit">wijzigingen opslaan</button>
@@ -131,16 +274,19 @@
           <div class="form-group">
             <label for="cur_pwd">Huidig wachtwoord</label>
             <input type="password" class="form-control" id="cur_pwd" name="cur_pwd">
+            <div class="form-feedback hidden"></div>
           </div>
 
           <div class="form-group">
             <label for="new_pwd">Nieuw wachtwoord</label>
             <input type="password" class="form-control" id="new_pwd" name="new_pwd">
+            <div class="form-feedback hidden"></div>
           </div>
 
           <div class="form-group">
             <label for="repeat_pwd">Bevestig je nieuwe wachtwoord</label>
             <input type="password" class="form-control" id="repeat_pwd" name="repeat_pwd">
+            <div class="form-feedback hidden"></div>
           </div>
 
           <button type="submit" class="btn btn-primary">wijzigingen opslaan</button>
@@ -219,8 +365,10 @@
   <script src="lib/jquery-min.js"></script>
   <script src="lib/backbone-min.js"></script>
   <script src="lib/backbone-validation-min.js"></script>
-  <script src="dist/js/views/password.js"></script>
+  <script src="dist/js/views/form.js"></script>
   <script src="dist/js/models/password.js"></script>
+  <script src="dist/js/models/user.js"></script>
+  <script src="dist/js/validation.js"></script>
   <script src="dist/js/app.js"></script>
 
 </body>
