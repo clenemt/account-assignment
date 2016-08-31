@@ -1,7 +1,7 @@
 {
   "name": "account-assignment",
   "version": "0.0.1",
-  "description": "A sample assignment",
+  "description": "A sample account assignment",
   "scripts": {
     "build": "run-p build:*",
     "build:css": "node-sass --output-style compressed -o dist/css/ scss/main.scss",
@@ -9,7 +9,8 @@
     "watch": "run-p watch:*",
     "watch:css": "watch-run -p scss/** \"npm run build:css\"",
     "watch:js": "watch-run -p js/** \"npm run build:js\"",
-    "sync": "browser-sync start -s -f dist index.html --reload-delay 500 --no-ui"
+    "sync": "browser-sync start -s -f dist index.html --reload-delay 500 --no-ui",
+    "test": "eslint js/**"
   },
   "devDependencies": {
     "watch-run": "latest",
@@ -17,7 +18,8 @@
     "browser-sync": "latest",
     "babel-cli": "latest",
     "babel-preset-es2015": "latest",
-    "npm-run-all": "latest"
+    "npm-run-all": "latest",
+    "eslint": "latest"
   },
   "repository": {
     "type": "git",

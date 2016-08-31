@@ -1,4 +1,4 @@
-/* eslint no-unused-vars: off, no-implicit-globals: off, strict: off */
+/* eslint no-unused-vars: off, no-implicit-globals: off */
 /* global Backbone, _ */
 
 var UserModel = (function () {

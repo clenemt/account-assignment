@@ -1,6 +1,6 @@
 'use strict';
 
-/* eslint no-unused-vars: off, no-implicit-globals: off, strict: off */
+/* eslint no-unused-vars: off, no-implicit-globals: off */
 /* global Backbone */
 
 var PasswordModel = function () {

@@ -1,4 +1,4 @@
-/* eslint no-unused-vars: off, no-implicit-globals: off, strict: off */
+/* eslint no-unused-vars: off, no-implicit-globals: off */
 /* global Backbone, _ */
 
 var FormView = (function () {
@@ -10,9 +10,11 @@ var FormView = (function () {
                 this.submit();
             }
         },
+
         initialize () {
             Backbone.Validation.bind(this);
         },
+
         submit () {
             var data = this.$el.serializeArray();
 
